@@ -1,4 +1,4 @@
-import BookingWidget from '../../widget/Booking';
+import BookingWidget from '../../widgets/Booking';
 import Title from '../../shared/Title';
 
 const BookingPage = () => {

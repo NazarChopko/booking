@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import App from './App.tsx';
-import Toast from './Layouts/ToastLayout/Toast.tsx';
+import Toast from './layouts/ToastLayout/Toast.tsx';
 
 import './index.css';
 import 'react-datepicker/dist/react-datepicker.css';
