@@ -1,12 +1,14 @@
-import { addDays, isSameDay, eachDayOfInterval } from 'date-fns';
+import { addDays, setHours, setMinutes, isSameDay, eachDayOfInterval } from 'date-fns';
 export const getMinTime = (startDate: Date | null): Date | undefined => {
   if (!startDate) return;
   const today = new Date();
+  const todayHours = today.getHours();
+
   const isStartDayIsToday =
     startDate.getDate() === today.getDate() &&
     startDate.getMonth() === today.getMonth() &&
     startDate.getFullYear() === today.getFullYear();
-  return isStartDayIsToday ? today : new Date(0, 0, 0, 14, 0);
+  return isStartDayIsToday ? (todayHours < 14 ? setHours(setMinutes(today, 59), 13) : today) : new Date(0, 0, 0, 14, 0);
 };
 
 export const prepareDate = (date: Date | null): string => {
