@@ -1,4 +1,4 @@
-import Button from '../../shared/Button/Button';
+import Button from '../../shared/Button';
 import BookingInfo from '../../shared/BookingInfo';
 import CustomDatePicker from '../../shared/CustomDatePicker';
 import ProgressTool from '../../shared/ProgressTool';
