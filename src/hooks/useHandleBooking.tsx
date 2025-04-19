@@ -93,6 +93,7 @@ const useHandleBooking = () => {
   };
 
   const handleClickCancel = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    e.preventDefault();
     setActiveStep(1);
     setStartDate(null);
     setEndDate(null);
@@ -101,6 +102,7 @@ const useHandleBooking = () => {
   };
 
   const bokingNewDate = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    e.preventDefault();
     const newBookedDate = [
       ...bookedDates,
       {
