@@ -5,9 +5,7 @@ const Header = () => {
         <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 ">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="#" className="flex items-center gap-1">
-              <span className="self-center text-xl font-semibold whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#86b1eb]">
-                BooKing
-              </span>
+              <span className="self-center text-xl font-semibold whitespace-nowrap text-primary">BooKing</span>
               <img src="/sea.png" className="w-6 h-6" />
             </a>
             <div className="flex items-center lg:order-2 ">
