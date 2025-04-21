@@ -10,14 +10,14 @@ type BookingInfoProps = {
 
 const BookingInfo: FC<BookingInfoProps> = ({ startTime, startDate, endTime, endDate }) => {
   return (
-    <p className="text-sm text-center">
+    <p className="text-sm text-center font-black text-white relative py-5">
       From{''}
-      <span className="text-primary font-semibold mx-2">
+      <span className="font-semibold mx-2">
         {prepareTime(startTime)} - {prepareDate(startDate)}
       </span>{' '}
       <br />
       To{' '}
-      <span className="text-primary font-semibold mx-2">
+      <span className="font-semibold mx-2">
         {prepareTime(endTime)} - {prepareDate(endDate)}
       </span>{' '}
     </p>

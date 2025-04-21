@@ -22,11 +22,19 @@ type CustomDatePickerProps = {
 };
 
 const CustomDatePicker: FC<CustomDatePickerProps> = ({ label, step, activeStep, ...props }) => {
-  const disabledStyles = step !== activeStep ? 'opacity-30 pointer-events-none' : '';
+  const disabledStyles = step !== activeStep ? 'opacity-50 pointer-events-none' : '';
   return (
-    <div className={twMerge('flex flex-col text-white bg-primary p-2 rounded-sm  ', disabledStyles)}>
+    <div
+      className={twMerge(
+        'flex flex-col text-white bg-transparent border-white border-1 backdrop-blur-[2px]  p-2 rounded-sm',
+        disabledStyles
+      )}
+    >
       <span className="text-[20px] lg:text-[16px]">{label}</span>
-      <DatePicker className="bg-gray-200 text-primary-text-grey px-1 cursor-pointer rounded-sm w-full" {...props} />
+      <DatePicker
+        className="bg-white text-primary-text-grey font-light px-1 text-[20px] cursor-pointer rounded-xs w-full "
+        {...props}
+      />
     </div>
   );
 };

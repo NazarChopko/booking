@@ -29,9 +29,16 @@ const BookingWidget = () => {
   } = useHandleBooking();
 
   return (
-    <div className="bg-primary-grey rounded-md border-gray-950 border-2 py-4">
+    <div className="bg-primary-grey h-full  lg:h-[400px] relative">
+      <video
+        autoPlay
+        muted
+        loop
+        className=" aspect-video  h-full w-full object-cover  lg:object-fill absolute  brightness-80"
+        src="/video.mp4"
+      ></video>
       <BookingInfo startDate={startDate} startTime={startTime} endDate={endDate} endTime={endTime} />
-      <Container containerType="column" className="p-4 gap-2 lg:flex-row">
+      <Container containerType="column" className="p-4  gap-2 lg:flex-row relative z-20">
         <CustomDatePicker
           label="Start day"
           step={1}
@@ -86,9 +93,9 @@ const BookingWidget = () => {
           placeholderText="Pick end time"
         />
       </Container>
-      <Container containerType="row" className="gap-2">
-        <Button onClick={handleClickCancel} text="Cancel" variant="cancel" />
-        <Button onClick={bokingNewDate} text="Booking" variant="submit" disabled={activeStep < 5} />
+      <Container containerType="row" className="gap-2 pb-5">
+        <Button onClick={handleClickCancel} text="Cancel" />
+        <Button onClick={bokingNewDate} text="Booking" disabled={activeStep < 5} />
       </Container>
     </div>
   );
