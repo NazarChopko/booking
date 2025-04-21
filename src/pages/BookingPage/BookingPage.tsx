@@ -1,5 +1,5 @@
 import BookingWidget from '../../widgets/Booking';
-import AppLayout from '../../layouts/AppLayout';
+import AppLayout from '../../Layouts/AppLayout';
 
 const BookingPage = () => {
   return (

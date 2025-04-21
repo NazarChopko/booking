@@ -2,7 +2,7 @@ import Button from '../../shared/Button';
 import BookingInfo from '../../shared/BookingInfo';
 import CustomDatePicker from '../../shared/CustomDatePicker';
 import ProgressTool from '../../shared/ProgressTool';
-import Container from '../../layouts/Container';
+import Container from '../../Layouts/Container';
 
 import useHandleBooking from '../../hooks/useHandleBooking';
 
