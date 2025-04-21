@@ -34,6 +34,7 @@ const BookingWidget = () => {
         autoPlay
         muted
         loop
+        playsInline
         className=" aspect-video  h-full w-full object-cover  lg:object-fill absolute  brightness-80"
         src="/video.mp4"
       ></video>
